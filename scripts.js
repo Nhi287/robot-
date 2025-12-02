@@ -1,4 +1,4 @@
-/****************** YOUR NAME: 
+/****************** YOUR NAME:Nhi Gia Vong
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
@@ -113,6 +113,7 @@ function changeDuration() {
 }
 
 durationButton.addEventListener("click", changeDuration);
+
 
 
 
