@@ -10,7 +10,8 @@ You are encouraged to use the provided naming convention for ease of review.
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-
+let modelName = "XYZ";    
+let duration = 0;   
 
 
 
@@ -26,6 +27,20 @@ You are encouraged to use the provided naming convention for ease of review.
 */
 
 // INSERT YOUR CODE HERE
+function recalculate() {
+    const costLabel = document.getElementById("calculated-cost");
+
+    let totalCost = 0;
+
+    if (modelName === "XYZ") {
+        totalCost = duration * 100;
+    } else if (modelName === "CPRG") {
+        totalCost = duration * 213;
+    }
+
+    costLabel.innerHTML = totalCost.toFixed(2);
+}
+
 
 
 
@@ -45,6 +60,23 @@ You are encouraged to use the provided naming convention for ease of review.
     // modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
+const modelButton = document.getElementById("model-button");
+
+function changeModel() {
+    const modelText = document.getElementById("model-text");
+
+    if (modelName === "XYZ") {
+        modelName = "CPRG";
+        modelText.innerHTML = "Model CPRG";
+    } else {
+        modelName = "XYZ";
+        modelText.innerHTML = "Model XYZ";
+    }
+
+    recalculate();
+}
+
+modelButton.addEventListener("click", changeModel);
 
 
 
@@ -64,6 +96,24 @@ You are encouraged to use the provided naming convention for ease of review.
 */
 
 // INSERT YOUR CODE HERE
+const durationButton = document.getElementById("duration-button");
+
+function changeDuration() {
+    const durationText = document.getElementById("duration-text");
+
+    const newDuration = prompt("Enter a new duration:");
+
+    if (newDuration !== null && !isNaN(newDuration) && newDuration >= 0) {
+        duration = Number(newDuration);
+        durationText.innerHTML = duration;
+        recalculate();
+    } else {
+        alert("Please enter a valid number.");
+    }
+}
+
+durationButton.addEventListener("click", changeDuration);
+
 
 
 
