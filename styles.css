@@ -13,12 +13,18 @@ header img {
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
     border-bottom: 1px solid white;
 }
 
 /* flexing */
 .flex {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* typography */
@@ -55,7 +61,7 @@ footer p {
 
 /* layout */
 main {
-    padding: 24px;
+    text-align: center;
 }
 
 h2 {
@@ -81,4 +87,5 @@ ul {
 span {
     color: yellow;
 }
+
 
